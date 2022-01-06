@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	.strips {
+		display: flex;
+		height: 100vh;
+		width: 100%;
+
+		%block {
+			display: flex;
+			position: relative;
+			opacity: 0;
+			width: 100%;
+			left: -250px;
+		}
+
+		&_one {
+			@extend %block;
+			background-color: #264653;
+		}
+
+		&_two {
+			@extend %block;
+			background-color: #2a9d8f;
+		}
+
+		&_three {
+			@extend %block;
+			background-color: #e9c46a;
+		}
+
+		&_four {
+			@extend %block;
+			background-color: #f4a261;
+		}
+
+		&_five {
+			@extend %block;
+			background-color: #e76f51;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <script src="anime.min.js"></script>
+</head>
+
+<body>
+    <div class="strips">
+        <div class="strips_one"></div>
+        <div class="strips_two"></div>
+        <div class="strips_three"></div>
+        <div class="strips_four"></div>
+        <div class="strips_five"></div>
+    </div>
+
+    <script>
+        var tl = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: 750
+        });
+
+        tl
+            .add({
+                targets: '.strips_five',
+                translateX: 250,
+                opacity: 1,
+            })
+            .add({
+                targets: '.strips_four',
+                translateX: 250,
+                opacity: 1,
+            }, '-=600')
+            .add({
+                targets: '.strips_three',
+                translateX: 250,
+                opacity: 1,
+            }, '-=600')
+            .add({
+                targets: '.strips_two',
+                translateX: 250,
+                opacity: 1,
+            }, '-=600')
+            .add({
+                targets: '.strips_one',
+                translateX: 250,
+                opacity: 1,
+            }, 400);
+    </script>
+</body>
+
+</html>
